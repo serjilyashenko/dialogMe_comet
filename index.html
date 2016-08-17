@@ -6,6 +6,7 @@
     <title>dialogMe</title>
 </head>
 <body>
+    <div id="my-id"></div>
     Несколько человек при заходе на эту страницу будут получать сообщения друг друга.
     <form name="publish">
         <input type="text" name="message">
@@ -15,9 +16,10 @@
     <div id="subscribe"></div>
 
     <script>
-        <!---->
-//      TODO: init form
-//      TODO: subscribe init
+        var id = Math.random();
+        document.getElementById('my-id').appendChild(document.createTextNode(id));
+        new formSend(document.forms.publish, '/publish?id=' + id);
+        new subscribePane(document.getElementById('subscribe'), '/subscribe?id=' + id);
     </script>
 </body>
 </html>
