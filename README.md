@@ -1,3 +1,3 @@
 # dialogMe_comet
 
-##Long-polling Comet technology 
+##Chat with Long-polling Comet technology 
